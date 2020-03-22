@@ -6,7 +6,7 @@
 
 ## Introduction
 
-So far, we've seen the power of wrapping "primitive" Ruby calls in methods.
+So far, we've seen the power of wrappin g "primitive" Ruby calls in methods.
 We've also seen the power of wrapping "First-Order" methods inside other
 methods.
 
