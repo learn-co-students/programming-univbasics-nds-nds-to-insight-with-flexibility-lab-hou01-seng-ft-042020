@@ -56,8 +56,11 @@ def movies_with_director_key(name, movies_collection)
   index = 0 
   
   while index < movies_collection.length do 
-    movies_collection[index][:director_name] = name
-    new_movies_collection << movies_collection[index]
+    # movies_collection[index][:director_name] = name
+    # new_movies_collection << movies_collection[index]
+    
+    movies_data = movies_collection[index]
+    new_movies_collection << movie_with_director_name(name,movies_data)
     index += 1 
   end
   
@@ -112,14 +115,11 @@ def movies_with_directors_set(source)
   
   # { :name => "A", :movies => [{ :title => "Test" }] }
   # becomes... [[{:title => "Test", :director_name => "A"}], ...[], ... []]
-  # result = source[index]
-      # [[]]  
-      
-      # result[index][movies_index][:director_name] = {}
-      
-      # result[index] = []
-      # result[index][movies_index] = {}
   
+  # [[]]  
+  # result[index] = []
+  # result[index][movies_index] = []
+  # result[index][movies_index][:director_name] = {}
   
   result = []
   index = 0 
